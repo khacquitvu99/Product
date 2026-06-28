@@ -132,6 +132,7 @@ function EditProduct(_id) {
     });
 
     promise.then(function (result) {
+
         ListProduct();
         GetID("xclose").click();
         alert(`Sản Phẩm ${result.data.name} cập nhật thành công!!`);
@@ -148,8 +149,7 @@ function dialogEdit(_id) {
     const promise = productService.getListProduct();
     promise.then(function (result) {
         const product = result.data.find(p => p.id === _id);
-
-        GetID("txt_id").value = product.id;
+        
         GetID("txt_name").value = product.name;
         GetID("txt_img").value = product.image;
         GetID("txt_screen").value = product.Screen;
