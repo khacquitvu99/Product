@@ -33,7 +33,7 @@ function renderCart() {
                 <input type="number" data-id ="${product.id}" class="w-16 border rounded p-1 text-center cart-qty-input" min="1" value="${quantity}"/>
             </td>
             <td class="py-4 px-6 font-mono">$${product.price}</td>
-            <td class="py-4 px-6 font-mono font-semibold text-slate-900 dark:text-white td-thanhtien">$${thanhTien}</td>
+            <td class="py-4 px-6 font-mono font-semibold text-slate-900 dark:text-white td-thanhtien">${thanhTien}</td>
             <td class="py-4 px-6 text-center">
                 <button class="bg-red-50 hover:bg-red-100 text-red-600 px-3 py-1.5 rounded-lg border border-red-200 cursor-pointer"
                 onclick="Delete('${product.id}')">Delete</button>

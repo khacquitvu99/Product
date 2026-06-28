@@ -23,7 +23,7 @@ function renderUI(data) {
             <td class="py-4 px-6 font-mono">${product.frontCamera}</td>
             <td class="py-4 px-6 font-mono">${product.backCamera}</td>
             <td class="py-4 px-6 font-mono">${product.type}</td>
-            <td class="py-4 px-6 font-mono">$${product.price}</td>
+            <td class="py-4 px-6 font-mono">${product.price}</td>
             <td class="py-4 px-6 font-mono">${product.desc}</td>
             <td>
                 <button
