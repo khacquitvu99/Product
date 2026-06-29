@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CyberPhone Shop</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- External stylesheet for custom styles (create ./css/styles.css) -->
+    <link rel="stylesheet" href="./css/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- flowbite -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
     />
   </head>
   <body
@@ -27,22 +35,41 @@
           >
             <i class="fa-solid fa-bolt text-sm"></i>
           </div>
-          <span
-            class="text-xl font-black tracking-tight bg-gradient-to-r from-[#2D99AE] to-[#05C776] bg-clip-text text-transparent"
-          >
-            Cyber<span class="text-gray-900 dark:text-white">Phone</span>
+          <span class="text-xl font-black tracking-tight">
+            <span
+              style="
+                background: linear-gradient(to right, #2d99ae, #05c776);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              "
+              >Cyber </span
+            ><span class="text-gray-900 dark:text-white">Phone</span>
           </span>
         </a>
 
         <!-- ================= DANH MỤC NAV (HIỂN THỊ TRÊN PC / IPAD) ================= -->
-        <nav class="hidden md:flex items-center gap-1 bg-gray-100/50 dark:bg-gray-800/40 p-1.5 rounded-xl border border-gray-200/20">
-          <a href="#" class="text-sm font-semibold px-4 py-2 rounded-lg bg-gradient-to-r from-[#2D99AE] to-[#05C776] text-white shadow-xs">
-            <i class="fa-solid fa-house mr-1"></i> Home
+        <nav
+          class="hidden md:flex items-center gap-1 bg-gray-100/50 dark:bg-gray-800/40 p-1.5 rounded-xl border border-gray-200/20"
+        >
+          <a
+            href="#"
+            class="text-sm font-semibold px-4 py-2 rounded-lg bg-gradient-to-r from-[#2D99AE] to-[#05C776] text-white shadow-xs"
+            style="background: linear-gradient(to right, #2d99ae, #05c776)"
+          >
+            <i class="fa-solid fa-house mr-1"></i>
+            Home
           </a>
-          <a href="#productSection" class="text-sm font-medium px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-[#2D99AE] hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+          <a
+            href="#productSection"
+            class="text-sm font-medium px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-[#2D99AE] hover:bg-gray-50 dark:hover:bg-gray-800 transition-all"
+          >
             <i class="fa-solid fa-mobile-screen-button mr-1"></i> Product
           </a>
-          <a href="#aboutSection" class="text-sm font-medium px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-[#2D99AE] hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+          <a
+            href="#aboutSection"
+            class="text-sm font-medium px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-[#2D99AE] hover:bg-gray-50 dark:hover:bg-gray-800 transition-all"
+          >
             <i class="fa-solid fa-circle-info mr-1"></i> About
           </a>
         </nav>
@@ -82,18 +109,33 @@
       </div>
 
       <!-- ================= DANH MỤC NAV TRÊN MOBILE (ẨN/HIỆN QUA JS) ================= -->
-      <div id="mobileMenu" class="hidden md:hidden border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 px-4 py-3 space-y-2 shadow-inner">
-        <a href="#" class="flex items-center gap-3 text-sm font-semibold p-3 rounded-xl bg-[#2D99AE]/10 text-[#2D99AE]">
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 px-4 py-3 space-y-2 shadow-inner"
+      >
+        <a
+          href="#"
+          class="flex items-center gap-3 text-sm font-semibold p-3 rounded-xl bg-[#2D99AE]/10 text-[#2D99AE]"
+        >
           <i class="fa-solid fa-house"></i> Home
         </a>
-        <a href="#productSection" class="flex items-center gap-3 text-sm font-medium p-3 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+        <a
+          href="#productSection"
+          class="flex items-center gap-3 text-sm font-medium p-3 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+        >
           <i class="fa-solid fa-mobile-screen-button"></i> Product
         </a>
-        <a href="#aboutSection" class="flex items-center gap-3 text-sm font-medium p-3 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+        <a
+          href="#aboutSection"
+          class="flex items-center gap-3 text-sm font-medium p-3 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+        >
           <i class="fa-solid fa-circle-info"></i> About
         </a>
-        <hr class="border-gray-100 dark:border-gray-800 my-2">
-        <a href="./view/Manager.html" class="flex items-center gap-3 text-sm font-bold text-gray-500 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800">
+        <hr class="border-gray-100 dark:border-gray-800 my-2" />
+        <a
+          href="./view/Manager.html"
+          class="flex items-center gap-3 text-sm font-bold text-gray-500 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800"
+        >
           <i class="fa-solid fa-user-gear"></i> Trang quản lý (Admin)
         </a>
       </div>
@@ -101,7 +143,6 @@
 
     <!-- MAIN CONTAINER -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
-      
       <!-- Section: Product (Khu vực Sản phẩm) -->
       <section id="productSection" class="scroll-mt-20">
         <div
@@ -111,7 +152,8 @@
             <h2
               class="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2"
             >
-              <i class="fa-solid fa-fire text-[#05C776]"></i> Điện thoại nổi bật nhất
+              <i class="fa-solid fa-fire text-[#05C776]"></i> Điện thoại nổi bật
+              nhất
             </h2>
             <p class="text-xs text-gray-400 mt-0.5">
               Khám phá các dòng smartphone chính hãng giá tốt
@@ -140,17 +182,178 @@
       </section>
 
       <!-- Section: About (Khối giới thiệu nhỏ đồng bộ giao diện) -->
-      <section id="aboutSection" class="mt-16 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-6 sm:p-8 rounded-3xl shadow-xs scroll-mt-20">
+      <section
+        id="aboutSection"
+        class="mt-16 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-6 sm:p-8 rounded-3xl shadow-xs scroll-mt-20"
+      >
         <div class="max-w-3xl">
-          <span class="text-xs font-bold text-[#2D99AE] uppercase tracking-widest">Về chúng tôi</span>
-          <h2 class="text-2xl font-black text-gray-900 dark:text-white mt-1 mb-4">Hệ thống công nghệ CyberPhone</h2>
+          <span
+            class="text-xs font-bold text-[#2D99AE] uppercase tracking-widest"
+            >Về chúng tôi</span
+          >
+          <h2
+            class="text-2xl font-black text-gray-900 dark:text-white mt-1 mb-4"
+          >
+            Hệ thống công nghệ CyberPhone
+          </h2>
           <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-            CyberPhone cam kết cung cấp các sản phẩm thiết bị di động thông minh chính hãng với mức giá cạnh tranh nhất. Trải nghiệm mua sắm an tâm với chế độ bảo hành chuẩn quốc tế, hỗ trợ kỹ thuật trọn đời và dịch vụ bàn giao siêu tốc.
+            CyberPhone cam kết cung cấp các sản phẩm thiết bị di động thông minh
+            chính hãng với mức giá cạnh tranh nhất. Trải nghiệm mua sắm an tâm
+            với chế độ bảo hành chuẩn quốc tế, hỗ trợ kỹ thuật trọn đời và dịch
+            vụ bàn giao siêu tốc.
           </p>
         </div>
       </section>
-
     </main>
+    <!-- modal -->
+    <section>
+      <div
+        id="crud-modal"
+        tabindex="-1"
+        aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full bg-black/40 backdrop-blur-xs"
+      >
+        <div class="relative p-4 w-full max-w-md max-h-full">
+          <div
+            class="relative bg-[#dfeff3] rounded-3xl shadow-2xl dark:bg-gray-800 border border-gray-100 dark:border-gray-700 overflow-hidden transition-all duration-300"
+          >
+            <div
+              class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-700/50 border-gray-50"
+            >
+              <h3
+                id="title"
+                class="text-xl font-extrabold"
+                style="
+                  background: linear-gradient(to right, #2d99ae, #05c776);
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              >
+                Thông Tin Chi Tiết
+              </h3>
+              <button
+                id="xclose"
+                type="button"
+                class="text-gray-400 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl text-sm w-8 h-8 ms-auto inline-flex justify-center items-center cursor-pointer transition-colors"
+                data-modal-hide="crud-modal"
+              >
+                <svg
+                  class="w-3 h-3"
+                  aria-hidden="true"
+                  fill="none"
+                  viewBox="0 0 14 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 6 6m0 0 7 7M7 7l7-7M7 7l-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="p-5">
+              <div
+                class="relative overflow-hidden rounded-2xl bg-gray-50 dark:bg-gray-900 flex items-center justify-center p-6 min-h-[200px] mb-5 border border-gray-100/50 dark:border-gray-800"
+              >
+                <div class="absolute top-3 left-3">
+                  <span
+                    class="bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm uppercase"
+                    >Hot</span
+                  >
+                </div>
+                <div id="td_hinh" class="w-full flex justify-center"></div>
+              </div>
+
+              <div class="space-y-4">
+                <div class="flex justify-between items-start gap-4">
+                  <h2
+                    id="td_ten"
+                    class="text-xl font-extrabold text-gray-900 dark:text-white line-clamp-2"
+                  >
+                    Tên sản phẩm
+                  </h2>
+                </div>
+
+                <div
+                  class="bg-gray-50/50 dark:bg-gray-900/30 rounded-2xl p-4 space-y-2.5 text-sm border border-gray-100/50 dark:border-gray-800"
+                >
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-400 dark:text-gray-500 font-medium"
+                      >Hãng sản xuất:</span
+                    >
+                    <span
+                      id="td_type"
+                      class="font-bold text-gray-800 dark:text-gray-200 uppercase tracking-wider text-xs bg-gray-200/60 dark:bg-gray-700 px-2.5 py-0.5 rounded-md"
+                      >N/A</span
+                    >
+                  </div>
+                  <div
+                    class="flex justify-between items-center border-t border-gray-100 dark:border-gray-800/60 pt-2"
+                  >
+                    <span class="text-gray-400 dark:text-gray-500 font-medium"
+                      >Màn hình:</span
+                    >
+                    <span
+                      id="td_screen"
+                      class="font-semibold text-gray-700 dark:text-gray-300"
+                      >N/A</span
+                    >
+                  </div>
+                  <div
+                    class="flex justify-between items-center border-t border-gray-100 dark:border-gray-800/60 pt-2"
+                  >
+                    <span class="text-gray-400 dark:text-gray-500 font-medium"
+                      >Camera trước:</span
+                    >
+                    <span
+                      id="td_camtrc"
+                      class="font-semibold text-gray-700 dark:text-gray-300"
+                      >N/A</span
+                    >
+                  </div>
+                  <div
+                    class="flex justify-between items-center border-t border-gray-100 dark:border-gray-800/60 pt-2"
+                  >
+                    <span class="text-gray-400 dark:text-gray-500 font-medium"
+                      >Camera chính:</span
+                    >
+                    <span
+                      id="td_camsau"
+                      class="font-semibold text-gray-700 dark:text-gray-300"
+                      >N/A</span
+                    >
+                  </div>
+                </div>
+
+                <div class="space-y-1">
+                  <span
+                    class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider"
+                    >Mô tả sản phẩm</span
+                  >
+                  <p
+                    id="td_desc"
+                    class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed bg-gray-50 dark:bg-gray-900/50 p-3 rounded-xl border border-dashed border-gray-200 dark:border-gray-700"
+                  >
+                    Chưa có mô tả chi tiết cho sản phẩm này.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="modal_footer"
+              class="p-4 md:p-5 border-t border-gray-50 dark:border-gray-700/50 flex justify-end gap-3 bg-gray-50/50 dark:bg-gray-900/20"
+            >
+              <div id="td_btn_buy"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
     <footer
@@ -161,22 +364,19 @@
       </p>
     </footer>
 
-    <!-- Scripts -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js"
-      integrity="sha512-h9644v03pHqrIHThkvXhB2PJ8zf5E9IyVnrSfZg8Yj8k4RsO4zldcQc4Bi9iVLUCCsqNY0b4WXVV4UB+wbWENA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <!-- Scripts axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js"></script>
 
     <!-- Đóng/Mở Menu Mobile inline bằng script đơn giản -->
     <script>
-      const btn = document.getElementById('mobileMenuBtn');
-      const menu = document.getElementById('mobileMenu');
-      btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
+      const btn = document.getElementById("mobileMenuBtn");
+      const menu = document.getElementById("mobileMenu");
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
       });
     </script>
+    <!-- Scripts  -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
     <script src="./js/main.js" type="module"></script>
   </body>
