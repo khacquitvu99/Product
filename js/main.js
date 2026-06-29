@@ -25,15 +25,15 @@ function renderUI(data) {
         const product = data[i];
         contentHTML += `
         <div
-            aria-label="Open modal" 
-            data-modal-target="crud-modal"
-            data-modal-toggle="crud-modal"
-            onclick="displayDetail(${product.id})"
             class="card cardPhone group relative flex flex-col justify-between bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-5">
             <div class="absolute top-4 left-4 z-10">
                 <span class="bg-red-500 text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow-xs">Hot</span>
             </div>
-            <div class="overflow-hidden rounded-xl bg-gray-50 dark:bg-gray-900 flex items-center justify-center p-4 min-h-[220px]">
+            <div class="overflow-hidden rounded-xl bg-gray-50 dark:bg-gray-900 flex items-center justify-center p-4 min-h-[220px]"
+            aria-label="Open modal" 
+            data-modal-target="crud-modal"
+            data-modal-toggle="crud-modal"
+            onclick="displayDetail(${product.id})">
                 <img src="./image/${product.image}" class="card-img-top w-full max-w-[160px] h-auto object-contain group-hover:scale-105 transition-transform duration-300" alt="${product.name}">
             </div>
             <div class="card-body flex flex-col flex-grow pt-4">
@@ -68,28 +68,28 @@ function renderUI(data) {
     }
 }
 
-window.displayDetail = function(productId) {
+window.displayDetail = function (productId) {
     // 1. Tìm sản phẩm trong mảng dữ liệu gốc
     const product = globalProducts.find(item => item.id == productId);
-    
+
     // Nếu không tìm thấy sản phẩm nào khớp ID, dừng hàm ngay
     if (!product) {
         console.error("Không tìm thấy sản phẩm có ID:", productId);
         return;
     }
-    
+
     // 2. Đổ trực tiếp dữ liệu của sản phẩm đó vào các thẻ HTML tương ứng
     // Lưu ý: Sửa lại đường dẫn ảnh cho đúng vị trí thư mục của bạn
     if (GetID("td_hinh")) {
         GetID("td_hinh").innerHTML = `<img src="./image/${product.image}" class="max-w-[150px] mx-auto object-contain"/>`;
     }
-    
-    if (GetID("td_ten"))      GetID("td_ten").innerHTML = product.name;
-    if (GetID("td_screen"))   GetID("td_screen").innerHTML = product.Screen; 
-    if (GetID("td_camtrc"))   GetID("td_camtrc").innerHTML = product.frontCamera; // Đảm bảo đúng hoa/thường với database
-    if (GetID("td_camsau"))   GetID("td_camsau").innerHTML = product.backCamera;  // Đảm bảo đúng hoa/thường với database
-    if (GetID("td_type"))     GetID("td_type").innerHTML = product.type;
-    if (GetID("td_desc"))     GetID("td_desc").innerHTML = product.desc;
+
+    if (GetID("td_ten")) GetID("td_ten").innerHTML = product.name;
+    if (GetID("td_screen")) GetID("td_screen").innerHTML = product.Screen;
+    if (GetID("td_camtrc")) GetID("td_camtrc").innerHTML = product.frontCamera; // Đảm bảo đúng hoa/thường với database
+    if (GetID("td_camsau")) GetID("td_camsau").innerHTML = product.backCamera;  // Đảm bảo đúng hoa/thường với database
+    if (GetID("td_type")) GetID("td_type").innerHTML = product.type;
+    if (GetID("td_desc")) GetID("td_desc").innerHTML = product.desc;
 
     // 3. Vì bạn dùng Flowbite và có thuộc tính data-modal-target="crud-modal" ở thẻ div ngoài,
     // thư viện Flowbite sẽ tự động bật modal lên khi click, bạn không cần viết code mở ở đây nữa!
