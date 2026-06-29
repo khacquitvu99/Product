@@ -1,7 +1,7 @@
 const URL = "https://6a183ccc1878294b597ca2c1.mockapi.io/phone-product";
 let globalProducts = [];
 
-function GetID(id) {return document.getElementById(id);}
+function GetID(id) { return document.getElementById(id); }
 
 function ListProduct() {
     const promise = axios({
@@ -10,7 +10,7 @@ function ListProduct() {
     });
 
     promise.then(function (result) {
-        globalProducts=result.data;
+        globalProducts = result.data;
         renderUI(result.data);
     });
 
@@ -76,12 +76,11 @@ function Search(data) {
     }
     renderUI(arrNew);
 }
-
 // Hàm thêm sản phẩm vào LocalStorage khi bấm "Buy Now"
 function addToCart(productId) {
     // Tìm sản phẩm được click trong mảng dữ liệu lấy từ API về
     const productTarget = globalProducts.find(item => item.id == productId);
-    if(!productTarget) return;
+    if (!productTarget) return;
 
     // Lấy giỏ hàng hiện tại từ localStorage về
     let cartList = JSON.parse(localStorage.getItem("ProductData")) || [];
@@ -102,6 +101,8 @@ function addToCart(productId) {
         // Nếu có rồi, tăng số lượng lên 1
         cartList[index].sl += 1;
     }
+    const totalCount = cartList.reduce((sum, item) => sum + item.sl, 0);
+    GetID("cartCount").innerHTML = totalCount;
 
     // Lưu lại vào LocalStorage
     localStorage.setItem("ProductData", JSON.stringify(cartList));
